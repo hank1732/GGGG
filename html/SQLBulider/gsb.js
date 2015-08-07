@@ -20,9 +20,10 @@ function makeTable(tables) {
 };
 
 function makePad(pad) {
-	pad.bind('dragenter', handleDragenter);
-	pad.bind('dragover', handleDragover);
-	pad.bind('drop', handleDragDrop);
+	pad.on('dragenter', handleDragenter);
+	pad.on('dragover', handleDragover);
+	pad.on('drop', handleDragDrop);
+
 	return false;
 };
 function handleDragStart(e){
@@ -45,6 +46,7 @@ function handleDragover(e){
 };
 function handleDragDrop(e) {
 	console.log("dragdrop");
+	e.preventDefault();
 	e.stopPropagation();
 	var pad = $(".js-main-pad");
 	var id = e.originalEvent.dataTransfer.getData("tableId");
@@ -65,7 +67,7 @@ function handleDragDrop(e) {
 			});
 		pad.append(newDom);
 		var sql_output = $(".sql-output code");
-		str.from(newDom.children('div').html());
+		str.from(newDom.children('.table-name').html());
 		sql_output.html(str.toString()+" ;");
 		$('code').each(function(i, block) {
 		  hljs.highlightBlock(block);
@@ -79,9 +81,23 @@ function handleDragDrop(e) {
 			});
 		}
 	}
+
+	// $(".cols").attr('draggable', 'true')
+	// .bind('dragstart', handleDragStart).bind('dragenter', handleDragenter)
+	// .bind('dragover', handleDragover).bind('drop', function(){e.preventDefault();e.stopPropagation();console.log("123")});
+
+	
 	
 	return false;
 };
+
+// $(".table-in-pad").attr('draggable', 'true')
+// 	.on('dragstart', 'li', handleDragStart)
+// 	.on('dragenter', 'li', handleDragenter)
+// 	.on('dragover', 'li', handleDragover)
+// 	.on('drop', 'li', function(evt){
+// 			console.log(evt);
+// 	}).end().find('li').attr('draggable',true);
 
 function handleClickCheckBox(e){
 	if( e.target.type == "checkbox" && e.target.nextSibling ){

@@ -9,6 +9,7 @@ body{
    user-select: none;
    background: #58666e;
    border: 1px solid;
+   height: 100%;
 }
 .grid {
     background: -webkit-linear-gradient(top, transparent 9px, #ddd 10px), -webkit-linear-gradient(left, #eee 9px, #ddd 10px);
@@ -31,11 +32,14 @@ section,aside{
 	background: #eee;
 }
 .wrap{
-	min-width: 800px;
+	min-width: 600px;
+	height: 100%;
 	margin: 5px 10px;	
  	background: #58666e;
 	overflow: hidden;
 }
+
+/*function-bar*/
 .function-bar{
 	height: 50px;
 	border-bottom: 1px solid black;
@@ -49,18 +53,20 @@ section,aside{
 	font-weight: bold;
 }
 
+/*table-list*/
 .table-in-list{
-	width: 250px;
-	height: 605px;
 	float: left;
+	width: 25%;
+	height: 605px;
 	padding: 15px 10px;
+	margin-right: 10px;
 }
-.table-in-list div.expand::before{
+.table-in-list .expand::before{
 	content: "-";
 	font-weight: bold;
 	margin-right: 5px;
 }
-.table-in-list div.collapse::before{
+.table-in-list collapse::before{
 	content: "+";
 	font-weight: bold;
 	margin-right: 5px;
@@ -71,13 +77,25 @@ section,aside{
 .table-in-list input{
 	display: none;
 }
-
-.main-pad, .sql-output{
-	margin-left: 260px;
+.table-in-list .cols{
+	display: none;
 }
+
+/*wrap*/
+.wrap-main-pad, .wrap-output{
+  display: -webkit-flex; /* Safari */
+  display: flex;
+  background: transparent;
+}
+/*main-pad*/
 .main-pad{
+	-webkit-flex: 1.3; /* Safari 6.1+ */
+  -ms-flex: 1.3; /* IE 10 */ 
+  flex: 1.3;
 	position: relative;
+	width: 45%;
 	height: 300px;
+	margin-right: 10px;
 	margin-bottom: 5px;
 	overflow: auto;
 	-moz-user-select: none; /*火狐*/
@@ -94,45 +112,40 @@ section,aside{
 }
 .table-in-pad .table-name{
 	text-align: center;
-}
-.table-in-pad div{
 	border-bottom: solid 1px; 
+}
+.table-in-pad .cols{
+	height: 25px;
 }
 .table-in-pad span{
 	margin-left: 10px;
 }
 
-.sql-template{
-	position: relative;
-	width: 300px;
-	height: 555px;
-	float: right;
-	cursor: pointer;
+/*result-pad*/
+.chart-output{
+	-webkit-flex: 1; /* Safari 6.1+ */
+  -ms-flex: 1; /* IE 10 */ 
+  flex: 1;
+	height: 300px;
 }
-.sql-template h3{
-	text-align: center;
-}
-.sql-template ul{
-	margin: 20px 10px;
-	list-style: none;
-	padding: 0;
-}
-.sql-template li{
-	padding: 15px 0;
-}
-.sql-template li:hover{
-	background: #ddd;
-}
-.temp-highlight{
-	font-style: italic;
-	color: #000;
-	font-weight: bold;
+.data-output{
+	-webkit-flex: 1.3; /* Safari 6.1+ */
+  -ms-flex: 1.3; /* IE 10 */ 
+  flex: 1.3;
+	height: 300px;
+	width: 33%;
 }
 
+/*sql-pad*/
 .sql-output{
+	-webkit-flex: 1; /* Safari 6.1+ */
+  -ms-flex: 1; /* IE 10 */ 
+  flex: 1;
 	position: relative;
+	width: 40%;
 	height: 300px;
 	padding: 10px 20px;
+	margin-right: 10px;
 }
 .sql-output pre{
 	/*margin-right: 110px;*/

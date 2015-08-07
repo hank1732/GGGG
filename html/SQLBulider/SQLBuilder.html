@@ -43,22 +43,22 @@
 		</section>
 		<aside class="table-in-list">
 			<ul class="level1">
-				<div class="expand">Data Source</div>
+				<li class="expand">Data Source</li>
 				<li>
 					<ul class="level2">
-						<div class="expand">Stream</div> 
+						<li class="expand">Stream</li> 
 						<li>
 							<ul id="list-table-11" class="level3 js-table-in-list">
-								<div class="table-name expand">table1</div>
-								<li>
+								<li class="table-name expand">table1</li>
+								<li class="cols">
 									<input type="checkBox" name="checkBox" />
 									<span>colume1</span>
 								</li>
-								<li>
+								<li class="cols">
 									<input type="checkBox" name="checkBox" />
 									<span>colume2</span>
 								</li>
-								<li>
+								<li class="cols">
 									<input type="checkBox" name="checkBox" />
 									<span>colume3</span>
 								</li>
@@ -66,8 +66,8 @@
 						</li>
 						<li>
 							<ul id="list-table-12" class="level3 js-table-in-list">
-								<div class="table-name expand">table2</div>
-								<li>
+								<li class="table-name expand">table2</li>
+								<li class="cols">
 									<input type="checkBox" name="checkBox" />
 									<span>colume</span>
 								</li>
@@ -77,15 +77,15 @@
 				</li>
 				<li>
 					<ul class="level2">
-						<div class="expand">Stream</div> 
+						<li class="expand">Stream</li> 
 						<li>
 							<ul id="list-table-21" class="level3 js-table-in-list">
-								<div class="table-name expand">table3</div>
-								<li>
+								<li class="table-name expand">table3</li>
+								<li class="cols">
 									<input type="checkBox" name="checkBox" />
 									<span>colume1</span>
 								</li>
-								<li>
+								<li class="cols">
 									<input type="checkBox" name="checkBox" />
 									<span>colume2</span>
 								</li>
@@ -93,8 +93,8 @@
 						</li>
 						<li>
 							<ul id="list-table-22" class="level3 js-table-in-list">
-								<div class="table-name expand">table4</div>
-								<li>
+								<li class="table-name expand">table4</li>
+								<li class="cols">
 									<input type="checkBox" name="checkBox" />
 									<span>colume</span>
 								</li>
@@ -104,16 +104,20 @@
 				</li>
 			</ul>
 		</aside>
-		<section class="main-pad grid js-main-pad">
-			<ul id="pad-table-22" class="level3 table-in-pad js-table-in-pad" style="position: absolute; left: 69px; top: 68px;">
-				<div class="table-name expand">table</div>
-				<li>
-					<input type="checkBox" name="checkBox" />
-					<span>colume</span>
-				</li>
-			</ul>
+		<section class="wrap-main-pad">
+			<section class="main-pad grid js-main-pad">
+				<ul id="pad-table-22" class="level3 table-in-pad js-table-in-pad" style="position: absolute; left: 69px; top: 68px;">
+					<li class="table-name expand">table</li>
+					<li>
+						<input type="checkBox" name="checkBox" />
+						<span>colume</span>
+					</li>
+				</ul>
+			</section>
+			<aside class="chart-output"></aside>
 		</section>
-		<section class="sql-output">
+		<section class="wrap-output">
+			<section class="sql-output">
 			<pre><code class="sql" contentEditable="true"> SELECT * FROM table ; </code></pre>
 			<!-- <aside class="stream-criteria">
 				<button class="btn btn-success btn-rounded">
@@ -121,6 +125,9 @@
 				</button>
 			</aside> -->
 		</section>
+		<aside class="data-output"></aside>
+		</section>
+		
 		<!-- <footer></footer> -->
 	</div>
 
