@@ -1,0 +1,138 @@
+/*base*/
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+.clearfix{*+height:1%;}
+body{
+   -moz-user-select: none; /*火狐*/
+   -webkit-user-select: none;  /*webkit浏览器*/
+   -ms-user-select: none;   /*IE10*/
+   -khtml-user-select: none; /*早期浏览器*/
+   user-select: none;
+   background: #58666e;
+   border: 1px solid;
+}
+.grid {
+    background: -webkit-linear-gradient(top, transparent 9px, #ddd 10px), -webkit-linear-gradient(left, #eee 9px, #ddd 10px);
+    background: -moz-linear-gradient(top, transparent 9px, #ddd 10px), -moz-linear-gradient(left, #eee 9px, #ddd 10px);
+    background: -o-linear-gradient(top, transparent 9px, #ddd 10px), -o-linear-gradient(left, #eee 9px, #ddd 10px);
+    background: -ms-linear-gradient(top, transparent 9px, #ddd 10px), -ms-linear-gradient(left, #eee 9px, #ddd 10px);
+    background: linear-gradient(top, transparent 9px, #ddd 10px), linear-gradient(left, #eee 9px, #ddd 10px);
+    -webkit-background-size: 10px 10px;
+    -moz-background-size: 10px 10px;
+    background-size: 10px 10px;
+}
+ul,li{
+	/*margin: 0;
+	padding: 0;
+	list-style: none;*/
+}
+/*base*/
+
+section,aside{
+	background: #eee;
+}
+.wrap{
+	/*width: 950px;*/
+	margin: 5px;	
+   	background: #58666e;
+	overflow: hidden;
+}
+.function-bar{
+	height: 50px;
+	border-bottom: 1px solid black;
+	margin: 5px 0;
+}
+.btn-wrap{
+	margin-left: 35px;
+}
+.btn-wrap button{
+	margin: 7px 10px 0 ;
+	font-weight: bold;
+}
+/*.function-bar button{
+	margin:15px 0px 0 40px;
+}*/
+.table-tree{
+	width: 200px;
+	height: 555px;
+	float: left;
+}
+.table-tree .level2 li{
+	margin:10px 0;
+}
+.table-tree .level2 .table-name{
+	background: #EEE;
+}
+.main-pad, .sql-output{
+	margin-left: 210px;
+	margin-right: 310px;
+	/*width: 75%;*/
+}
+.main-pad{
+	height: 350px;
+	margin-bottom: 5px;
+	overflow: auto;
+	-moz-user-select: none; /*火狐*/
+	-webkit-user-select: none;  /*webkit浏览器*/
+	-ms-user-select: none;   /*IE10*/
+	-khtml-user-select: none; /*早期浏览器*/
+	user-select: none;
+}
+.table-in-pad ul,li.table-in-pad{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+li.table-in-pad{
+	width: 100px;
+	background: #9FF3F5;
+	font-weight: bold;
+	padding: 5px;
+}
+.table-in-pad ul{
+	border: 1px solid #bbb;
+}
+.table-in-pad li{
+	position: relative;
+	padding-left: 22px;
+	color: #000;
+}
+.table-in-pad li + li{
+	border-top: 1px dashed #bbb;
+}
+.table-in-pad input{
+	position: absolute;
+	left: 5px;
+}
+.table-in-pad .table-name{
+	text-align: center;
+	margin: 5px;
+	color: #0066CC;
+}
+.sql-template h3{
+	text-align: center;
+}
+.sql-template ul{
+	margin: 20px 10px;
+	list-style: none;
+	padding: 0;
+}
+.sql-template li{
+	padding: 15px 0;
+}
+.sql-template li:hover{
+	background: #A0FFB6;
+}
+.sql-output{
+	position: relative;
+	height: 200px;
+	padding: 10px 20px;
+}
+.sql-template{
+	width: 300px;
+	height: 555px;
+	float: right; 
+}
+
+
+
+

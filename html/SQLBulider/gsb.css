@@ -1,0 +1,160 @@
+/*base*/
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+.clearfix{*+height:1%;}
+body{
+   -moz-user-select: none; /*火狐*/
+   -webkit-user-select: none;  /*webkit浏览器*/
+   -ms-user-select: none;   /*IE10*/
+   -khtml-user-select: none; /*早期浏览器*/
+   user-select: none;
+   background: #58666e;
+   border: 1px solid;
+}
+.grid {
+    background: -webkit-linear-gradient(top, transparent 9px, #ddd 10px), -webkit-linear-gradient(left, #eee 9px, #ddd 10px);
+    background: -moz-linear-gradient(top, transparent 9px, #ddd 10px), -moz-linear-gradient(left, #eee 9px, #ddd 10px);
+    background: -o-linear-gradient(top, transparent 9px, #ddd 10px), -o-linear-gradient(left, #eee 9px, #ddd 10px);
+    background: -ms-linear-gradient(top, transparent 9px, #ddd 10px), -ms-linear-gradient(left, #eee 9px, #ddd 10px);
+    background: linear-gradient(top, transparent 9px, #ddd 10px), linear-gradient(left, #eee 9px, #ddd 10px);
+    -webkit-background-size: 10px 10px;
+    -moz-background-size: 10px 10px;
+    background-size: 10px 10px;
+}
+ul,li{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+/*base*/
+
+section,aside{
+	background: #eee;
+}
+.wrap{
+	min-width: 800px;
+	margin: 5px 10px;	
+ 	background: #58666e;
+	overflow: hidden;
+}
+.function-bar{
+	height: 50px;
+	border-bottom: 1px solid black;
+	margin: 5px 0;
+}
+.btn-wrap{
+	margin-left: 35px;
+}
+.btn-wrap button{
+	margin: 7px 10px 0 ;
+	font-weight: bold;
+}
+
+.table-in-list{
+	width: 250px;
+	height: 605px;
+	float: left;
+	padding: 15px 10px;
+}
+.table-in-list div.expand::before{
+	content: "-";
+	font-weight: bold;
+	margin-right: 5px;
+}
+.table-in-list div.collapse::before{
+	content: "+";
+	font-weight: bold;
+	margin-right: 5px;
+}
+.table-in-list .level1,.table-in-list .level1 li{
+	margin-left: 15px;
+}
+.table-in-list input{
+	display: none;
+}
+
+.main-pad, .sql-output{
+	margin-left: 260px;
+}
+.main-pad{
+	position: relative;
+	height: 300px;
+	margin-bottom: 5px;
+	overflow: auto;
+	-moz-user-select: none; /*火狐*/
+	-webkit-user-select: none;  /*webkit浏览器*/
+	-ms-user-select: none;   /*IE10*/
+	-khtml-user-select: none; /*早期浏览器*/
+	user-select: none;
+}
+.table-in-pad {
+	width: 100px;
+	background: #ddd;
+	font-weight: bold;
+	padding: 5px;
+}
+.table-in-pad .table-name{
+	text-align: center;
+}
+.table-in-pad div{
+	border-bottom: solid 1px; 
+}
+.table-in-pad span{
+	margin-left: 10px;
+}
+
+.sql-template{
+	position: relative;
+	width: 300px;
+	height: 555px;
+	float: right;
+	cursor: pointer;
+}
+.sql-template h3{
+	text-align: center;
+}
+.sql-template ul{
+	margin: 20px 10px;
+	list-style: none;
+	padding: 0;
+}
+.sql-template li{
+	padding: 15px 0;
+}
+.sql-template li:hover{
+	background: #ddd;
+}
+.temp-highlight{
+	font-style: italic;
+	color: #000;
+	font-weight: bold;
+}
+
+.sql-output{
+	position: relative;
+	height: 300px;
+	padding: 10px 20px;
+}
+.sql-output pre{
+	/*margin-right: 110px;*/
+}
+.stream-criteria{
+	position: absolute;
+	right: 0;
+	top:0;
+	width: 100px;
+	height: 180px;
+	margin: 10px;
+}
+.stream-criteria button{
+  display: block;
+  width: 80px;
+  height: 60px;
+  margin: 80px auto;
+  border-radius: 15px;
+}
+.stream-criteria i{
+	font-size: 18px;
+}
+
+
+

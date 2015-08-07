@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Graphical SQL Builder</title>
+
+  <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.css" type="text/css" />
+  <link rel="stylesheet" href="../../bower_components/animate.css/animate.css" type="text/css" />
+  <link rel="stylesheet" href="../../bower_components/font-awesome/css/font-awesome.min.css" type="text/css" />
+  <link rel="stylesheet" href="../../bower_components/simple-line-icons/css/simple-line-icons.css" type="text/css" />
+  <link rel="stylesheet" href="../css/font.css" type="text/css" />
+  <link rel="stylesheet" href="../css/app.css" type="text/css" />
+
+	<!-- just for this page -->
+	<link rel="stylesheet" href="gsb.css">
+	<link rel="stylesheet" href="default.css">
+	<script src="highlight.pack.js"></script>
+	<!-- just for this page -->
+
+</head>
+<body>
+	<div class="wrap clearfix">
+		<!-- <header></header> -->
+		<section class="function-bar">
+			<div class="btn-wrap">				
+				<button class="btn btn-warning btn-addon">
+					<i class="glyphicon icon-link"></i>
+					Connection
+				</button>
+				<button class="btn btn-success btn-addon">
+					<i class="fa fa-play"></i>
+					Run
+				</button>
+				<button class="btn btn-info btn-addon">
+					<i class="glyphicon glyphicon-import"></i>
+					Import
+				</button>
+				<button class="btn btn-primary btn-addon">
+					<i class="glyphicon glyphicon-export"></i>
+					Export
+				</button>
+			</div>
+		</section>
+		<aside class="table-in-list">
+			<ul class="level1">
+				<div class="expand">Data Source</div>
+				<li>
+					<ul class="level2">
+						<div class="expand">Stream</div> 
+						<li>
+							<ul id="list-table-11" class="level3 js-table-in-list">
+								<div class="table-name expand">table1</div>
+								<li>
+									<input type="checkBox" name="checkBox" />
+									<span>colume1</span>
+								</li>
+								<li>
+									<input type="checkBox" name="checkBox" />
+									<span>colume2</span>
+								</li>
+								<li>
+									<input type="checkBox" name="checkBox" />
+									<span>colume3</span>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<ul id="list-table-12" class="level3 js-table-in-list">
+								<div class="table-name expand">table2</div>
+								<li>
+									<input type="checkBox" name="checkBox" />
+									<span>colume</span>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<ul class="level2">
+						<div class="expand">Stream</div> 
+						<li>
+							<ul id="list-table-21" class="level3 js-table-in-list">
+								<div class="table-name expand">table3</div>
+								<li>
+									<input type="checkBox" name="checkBox" />
+									<span>colume1</span>
+								</li>
+								<li>
+									<input type="checkBox" name="checkBox" />
+									<span>colume2</span>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<ul id="list-table-22" class="level3 js-table-in-list">
+								<div class="table-name expand">table4</div>
+								<li>
+									<input type="checkBox" name="checkBox" />
+									<span>colume</span>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</aside>
+		<section class="main-pad grid js-main-pad">
+			<ul id="pad-table-22" class="level3 table-in-pad js-table-in-pad" style="position: absolute; left: 69px; top: 68px;">
+				<div class="table-name expand">table</div>
+				<li>
+					<input type="checkBox" name="checkBox" />
+					<span>colume</span>
+				</li>
+			</ul>
+		</section>
+		<section class="sql-output">
+			<pre><code class="sql" contentEditable="true"> SELECT * FROM table ; </code></pre>
+			<!-- <aside class="stream-criteria">
+				<button class="btn btn-success btn-rounded">
+					<i class="fa fa-play"></i>
+				</button>
+			</aside> -->
+		</section>
+		<!-- <footer></footer> -->
+	</div>
+
+	<script src="../../bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="../../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+	<script src="../js/ui-load.js"></script>
+	<script src="../js/ui-jp.config.js"></script>
+	<script src="../js/ui-jp.js"></script>
+	<script src="../js/ui-nav.js"></script>
+	<script src="../js/ui-toggle.js"></script>
+
+	<!-- just for this page -->
+	<script src="squel.js"></script>
+	<script src="gsb.js"></script>
+
+	<!-- highilight.js -->
+	<script>hljs.initHighlightingOnLoad();</script>
+
+	<!-- just for this page -->
+</body>
+</html>
